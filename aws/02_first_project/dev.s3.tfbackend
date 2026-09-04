@@ -1,1 +1,4 @@
-c
+bucket       = "250509934912-tfstate-bucket"
+key          = "first_project/dev/terraform.tfstate"
+use_lockfile = true
+region       = "ap-south-1"

@@ -19,7 +19,9 @@ resource "aws_instance" "web" {
   tags = merge(local.common_tags, {
     Name = "web_instance"
   })
-
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 output "web_instance_public_ip" {
