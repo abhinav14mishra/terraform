@@ -1,3 +1,4 @@
+// Declare and validate the inputs used to configure the instance.
 variable "aws_region" {
   type    = string
   default = "ap-south-1"

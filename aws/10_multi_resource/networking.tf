@@ -1,3 +1,4 @@
+// Create a VPC and the public subnets used by the instances.
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
 

@@ -1,3 +1,4 @@
+// Select AMIs by platform and create the requested instances.
 locals {
   ami_ids = {
     ubuntu = data.aws_ami.ubuntu.id

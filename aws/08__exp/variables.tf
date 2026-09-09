@@ -1,3 +1,4 @@
+// Define the typed collections used by the expression examples.
 variable "number_list" {
   description = "A list of numbers"
   type        = list(number)

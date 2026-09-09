@@ -1,3 +1,4 @@
+// Demonstrate Terraform string and numeric functions.
 locals {
   name = "abhinav mishra"
   age = -23

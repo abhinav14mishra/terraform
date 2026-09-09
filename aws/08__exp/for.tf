@@ -1,3 +1,4 @@
+// Demonstrate for-expressions over numbers and objects.
 locals {
   double_numbers = [for i in var.number_list : i * 2]
 }

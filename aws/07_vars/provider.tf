@@ -1,3 +1,4 @@
+// Configure the AWS provider from the aws_region variable.
 terraform {
   required_providers {
     aws = {

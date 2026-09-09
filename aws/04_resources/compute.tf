@@ -1,3 +1,4 @@
+// Launch and configure the example web server.
 
 resource "aws_instance" "web" {
   ami           = "ami-090d68841c2a28756"

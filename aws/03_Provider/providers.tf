@@ -1,3 +1,4 @@
+// Declare the AWS provider and its region for this example.
 terraform {
   required_providers {
     aws = {

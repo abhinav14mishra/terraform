@@ -1,3 +1,4 @@
+// Allow HTTP and SSH traffic to the web server.
 resource "aws_security_group" "web_sg" {
   name        = "web_sg"
   description = "Security group for web server"

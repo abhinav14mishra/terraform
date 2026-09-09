@@ -1,3 +1,4 @@
+// Define a basic VPC and its core networking components.
 terraform {
   required_providers {
     aws = {

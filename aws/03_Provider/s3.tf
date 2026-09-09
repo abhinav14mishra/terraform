@@ -1,3 +1,4 @@
+// Create example buckets in the configured AWS regions.
 
 
 resource "random_id" "bucket_suffix" {

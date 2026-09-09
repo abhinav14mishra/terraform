@@ -1,3 +1,4 @@
+// Configure AWS for the website and Random for a unique bucket name.
 terraform {
   required_providers {
     aws = {

@@ -1,3 +1,4 @@
+// Configure the AWS provider required by this expressions example.
 terraform {
   required_providers {
     aws = {

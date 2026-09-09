@@ -1,3 +1,4 @@
+// Return IDs for the instances and subnets created by this example.
 output "instance_ids" {
   value = aws_instance.instance[*].id
 }

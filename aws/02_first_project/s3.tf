@@ -1,3 +1,4 @@
+// Create an S3 bucket using the configured AWS provider.
 
 
 resource "random_id" "bucket_suffix" {

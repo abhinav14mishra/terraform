@@ -1,3 +1,4 @@
+// Create and publish the S3 static website.
 resource "random_id" "bucket_suffix" {
   byte_length = 6
 }

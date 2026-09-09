@@ -1,6 +1,11 @@
+// Declare and validate subnet and instance configuration inputs.
 variable "subnet_count" {
   type    = number
   default = 1
+  validation {
+    condition     = var.subnet_count > 0
+    error_message = "The subnet_count variable must be greater than 0."
+  }
 }
 
 variable "ec2_instance_config" {
@@ -20,9 +25,5 @@ variable "ec2_instance_config" {
   validation {
     condition     = alltrue([for instance in var.ec2_instance_config : contains(["ubuntu", "amazon"], instance.ami)])
     error_message = "The ec2_instance_config variable contains an invalid AMI type. Allowed types are: ubuntu, amazon."
-  }
-  validation {
-    condition     = length(var.ec2_instance_config) <= var.subnet_count
-    error_message = "The number of EC2 instance configurations cannot exceed the number of subnets."
   }
 }

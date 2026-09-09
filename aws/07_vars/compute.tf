@@ -1,3 +1,4 @@
+// Select the latest Amazon Linux AMI and create the instance.
 data "aws_ami" "amzn" {
   most_recent = true
 

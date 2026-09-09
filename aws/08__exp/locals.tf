@@ -1,3 +1,4 @@
+// Evaluate arithmetic, comparison, equality, and logical operators.
 locals {
   math       = 2 + 2
   equality   = 2 != 2
