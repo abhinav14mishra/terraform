@@ -42,16 +42,31 @@ data "aws_ami" "amzn" {
   owners = ["amazon"]
 }
 
-resource "aws_instance" "instance" {
+# resource "aws_instance" "from_list" {
 
-  count = length(var.ec2_instance_config)
+#   count = length(var.ec2_instance_config)
 
-  ami           = local.ami_ids[var.ec2_instance_config[count.index].ami]
-  instance_type = var.ec2_instance_config[count.index].type
-  subnet_id     = aws_subnet.public[count.index % length(aws_subnet.public)].id
+#   ami           = local.ami_ids[var.ec2_instance_config[count.index].ami]
+#   instance_type = var.ec2_instance_config[count.index].type
+#   subnet_id     = aws_subnet.public[count.index % length(aws_subnet.public)].id
+
+
+#   tags = {
+#     Name = "Instance-${count.index + 1}"
+#   }
+# }
+
+
+resource "aws_instance" "from_map" {
+
+  for_each = var.ec2_instances_config_maps
+
+  ami           = local.ami_ids[each.value.ami]
+  instance_type = each.value.type
+  subnet_id     = aws_subnet.public[index(keys(var.ec2_instances_config_maps), each.key) % length(aws_subnet.public)].id
 
 
   tags = {
-    Name = "Instance-${count.index + 1}"
+    Name = "Instance-${each.key}"
   }
 }

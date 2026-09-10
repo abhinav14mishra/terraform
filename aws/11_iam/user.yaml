@@ -1,0 +1,14 @@
+# This file contains the list of users and their associated roles in YAML format.
+#Schema version: 1.0
+# users={
+#       username: string
+#       roles: (readonly | developer | admin | auditor)[]
+#}[]
+
+users:
+ - username: user1
+   policies : [admin, auditor]
+ - username: user2
+   policies : [developer, readonly]
+ - username: user3
+   policies : [readonly]
